@@ -125,3 +125,8 @@ def export_csv(file_id: str, data: dict):
         media_type="text/csv",
         filename=f"{file_id}.csv"
     )
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=8000)
+
