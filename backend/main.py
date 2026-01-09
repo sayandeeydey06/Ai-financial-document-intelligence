@@ -58,9 +58,6 @@ async def analyze_document(file: UploadFile = File(...)):
         if file.filename.lower().endswith(".pdf"):
             text = extract_text_from_pdf(file_path)
         else:
-            text = extract_text_from_image(file_path)
-
-        if not text or len(text.strip()) == 0:
          return {
         "status": "error",
         "message": "No readable text found in document"
