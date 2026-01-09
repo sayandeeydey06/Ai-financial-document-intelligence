@@ -1,4 +1,6 @@
-pytesseract
+fastapi
+uvicorn
+python-multipart
 pillow
+pytesseract
 pdfplumber
-pdf2image
