@@ -50,32 +50,36 @@ async def analyze_document(file: UploadFile = File(...)):
         file_id = str(uuid.uuid4())
         file_path = os.path.join(UPLOAD_DIR, f"{file_id}_{file.filename}")
 
-        # Save file
+        # Save uploaded file
         with open(file_path, "wb") as buffer:
             shutil.copyfileobj(file.file, buffer)
 
-        # OCR
+        # OCR step
         if file.filename.lower().endswith(".pdf"):
             text = extract_text_from_pdf(file_path)
         else:
-         return {
-        "status": "error",
-        "message": "No readable text found in document"
-    }
+            text = extract_text_from_image(file_path)
 
+        # ✅ SAFETY CHECK
+        if not text or len(text.strip()) == 0:
+            return {
+                "status": "error",
+                "message": "No readable text found in document"
+            }
 
+        # Debug print (VERY IMPORTANT)
         print("\n----- OCR TEXT START -----\n")
         print(text)
         print("\n----- OCR TEXT END -----\n")
 
-        # Rule-based AI extraction
+        # Rule-based extraction
         extracted_data = extract_financial_data_rule_based(text)
 
         return {
             "status": "success",
             "file_id": file_id,
             "filename": file.filename,
-            "document_type": extracted_data.get("document_type"),
+            "document_type": extracted_data.get("document_type", "Unknown"),
             "extracted_data": extracted_data
         }
 
@@ -85,6 +89,7 @@ async def analyze_document(file: UploadFile = File(...)):
             "status": "error",
             "message": str(e)
         }
+
 
 
 
