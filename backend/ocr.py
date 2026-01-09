@@ -3,9 +3,13 @@ from PIL import Image
 import pdfplumber
 
 def extract_text_from_image(image_path):
-    img = Image.open(image_path)
-    text = pytesseract.image_to_string(img)
-    return text
+    try:
+        import pytesseract
+        from PIL import Image
+        return pytesseract.image_to_string(Image.open(image_path))
+    except Exception as e:
+        return ""
+
 
 def extract_text_from_pdf(pdf_path):
     text = ""

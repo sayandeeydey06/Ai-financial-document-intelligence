@@ -60,11 +60,12 @@ async def analyze_document(file: UploadFile = File(...)):
         else:
             text = extract_text_from_image(file_path)
 
-        if not text or not text.strip():
-            return {
-                "status": "error",
-                "message": "No readable text found in document"
-            }
+        if not text or len(text.strip()) == 0:
+         return {
+        "status": "error",
+        "message": "No readable text found in document"
+    }
+
 
         print("\n----- OCR TEXT START -----\n")
         print(text)
