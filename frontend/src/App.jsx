@@ -18,7 +18,7 @@ function App() {
     setResult(null);
 
     try {
-      const res = await fetch("https://ai-financial-backend-xm2p.onrender.com/analyze", {
+      const res = await fetch("https://ai-financial-document-intelligence-1.onrender.com/analyze", {
         method: "POST",
         body: formData,
       });
