@@ -3,6 +3,7 @@
 An AI-powered web application that extracts structured financial data from invoices (PDFs and images), including totals, tax, invoice numbers, risk indicators, and document classification.
 
 
+
 ✨ Features :
 
 • Upload invoice images or PDFs
@@ -27,6 +28,7 @@ An AI-powered web application that extracts structured financial data from invoi
 
 
 
+
 🧠 How It Works :
 
 1. User uploads a document
@@ -38,6 +40,7 @@ An AI-powered web application that extracts structured financial data from invoi
 4. Confidence score and risk flags are calculated
 
 5. Results are displayed and can be edited or exported
+   
 
 
 
@@ -53,6 +56,8 @@ To handle this, the system implements a graceful fallback mode:
         3.The system returns structured placeholders instead of crashing
 
 This design reflects real-world production constraints and demonstrates cloud-safe AI engineering.
+
+
 
 🛠️ Tech Stack :
 
