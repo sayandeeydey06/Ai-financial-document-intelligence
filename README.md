@@ -13,7 +13,7 @@ An AI-powered web application that extracts structured financial data from invoi
 
 • Invoice number, date, total, tax, vendor extraction
 
-• Confidence scoring
+• Confidence scoring 
 
 • Risk flag detection
 
