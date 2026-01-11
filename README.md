@@ -9,7 +9,7 @@ An AI-powered web application that extracts structured financial data from invoi
 • OCR-based text extraction
 • AI-powered financial field detection
 • Invoice number, date, total, tax, vendor extraction
-• Confidence scoring
+• Confidence scoring 
 • Risk flag detection
 • Document classification (Invoice / Receipt / Unknown)
 • Editable extracted data
