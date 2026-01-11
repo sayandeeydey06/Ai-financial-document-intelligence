@@ -11,6 +11,8 @@ function App() {
       return;
     }
 
+    
+
     const formData = new FormData();
     formData.append("file", file);
 
