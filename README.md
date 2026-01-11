@@ -1,4 +1,5 @@
 AI Financial Document Intelligence Platform :
+
 An AI-powered web application that extracts structured financial data from invoices (PDFs and images), including totals, tax, invoice numbers, risk indicators, and document classification.
 
 ✨ Features :
