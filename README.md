@@ -6,14 +6,23 @@ An AI-powered web application that extracts structured financial data from invoi
 ✨ Features :
 
 • Upload invoice images or PDFs
+
 • OCR-based text extraction
+
 • AI-powered financial field detection
+
 • Invoice number, date, total, tax, vendor extraction
+
 • Confidence scoring
+
 • Risk flag detection
+
 • Document classification (Invoice / Receipt / Unknown)
+
 • Editable extracted data
+
 • JSON & CSV export
+
 • Cloud deployment (Vercel + Render)
 
 
@@ -21,9 +30,13 @@ An AI-powered web application that extracts structured financial data from invoi
 🧠 How It Works :
 
 1. User uploads a document
+
 2. OCR converts the document into raw text
+
 3. Rule-based AI extracts financial fields
+
 4. Confidence score and risk flags are calculated
+
 5. Results are displayed and can be edited or exported
 
 
@@ -44,10 +57,15 @@ This design reflects real-world production constraints and demonstrates cloud-sa
 🛠️ Tech Stack :
 
 • Frontend: React (Vercel)
+
 • Backend: FastAPI (Render)
+
 • AI: OCR + Rule-based NLP
+
 • Language: Python, JavaScript
+
 • Export: CSV, JSON
+
 • Deployment: Cloud-hosted REST architecture
 
 
