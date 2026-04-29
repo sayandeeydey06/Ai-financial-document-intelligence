@@ -14,4 +14,4 @@
 - Deployment: AWS S3 (frontend) + EC2 (backend)
 
 🔹 Live Demo:
-http://ai-doc-intelligence-frontend.s3-website-ap-south-1.amazonaws.com
+http://ai-doc-intelligence-frontend.s3-website-ap-south-1.amazonaws.com/
