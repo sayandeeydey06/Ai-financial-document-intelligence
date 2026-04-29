@@ -20,7 +20,7 @@ function App() {
     setResult(null);
 
     try {
-      const res = await fetch("https://ai-financial-document-intelligence-1.onrender.com/analyze", {
+      const res = await fetch("http://13.206.199.183:8000/analyze", {
         method: "POST",
         body: formData,
       });
